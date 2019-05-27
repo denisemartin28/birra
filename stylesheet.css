@@ -1,0 +1,22 @@
+
+.jumbotron {
+ margin-bottom: : 0;
+}
+.navbar {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 100;
+  padding: 0px;
+}
+.containerbody {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  margin: 0px;
+}
