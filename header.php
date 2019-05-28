@@ -19,7 +19,7 @@ $navbar=[
     <title></title>
   </head>
   <body>
-  <div class="containerbody">
+  <div class="containerheader">
     <div class="jumbotron">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -32,9 +32,6 @@ $navbar=[
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
           <div class="item active">
-              <img  src=img\growlacb.png alt="">
-          </div>
-          <div class="item">
               <img src=img\descarga.jpg alt="">
           </div>
           <div class="item">
@@ -51,7 +48,7 @@ $navbar=[
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Logo</a>
+          <img src="img\Growla_logo_circulo_fondoblanco.png" alt="logo" class="navbar-brand">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
