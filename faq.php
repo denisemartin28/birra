@@ -7,16 +7,17 @@
     <title>FAQ</title>
   </head>
   <body>
-    <<?php include ("header.php") ?>
+    <?php require ("header.php") ?>
     <h1>Preguntas frecuentes</h1>
     <nav>
       <ol>
         <li>¿En qué formato puedo adquirir las cervezas Growla?</li>
-        <p>Las cervezas pueden conseguirse en growlers de 2 litros, en barriles de </p>
+        <p>Las cervezas pueden conseguirse en growlers de 1.9 litros, en barriles de 30 y 50 litros </p>
         <li>¿Dónde puedo adquirir las cervezas?</li>
         <li>¿Hacen envío a domicilio?</li>
         <li>¿Con qué medios de pago cuentan?</li>
       </ol>
     </nav>
+    <?php require ("footer.php") ?>
   </body>
 </html>

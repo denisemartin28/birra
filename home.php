@@ -9,10 +9,10 @@
   </head>
   <body>
     <?php include("header.php") ?>
-    <img src="img\Growla_logo_completo_negro.png" alt="logo completo" class="prueba">
-     /*esta prueba es para ver el logo que actualmente tiene letras negras*/
-    <div>
-    <h1>Somos Growla, una empresa que crece a partir de dos pilares fundamentales: el amor por la birra y la amistad. </h1>
+    <div id="home">
+    <img src="img\logoblanco.png" alt="logo completo">
+    <h1>Somos Growla, una empresa que crece sobre dos pilares fundamentales: el amor por la birra y la amistad. </h1>
     </div>
+    <<?php include("footer.php") ?>
   </body>
 </html>

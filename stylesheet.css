@@ -27,9 +27,27 @@ h1 {
   width: 50%;
   padding: 20px;
 }
-.prueba {
-  border-color: white;
-  border: solid;
-  border-width: 3px;
+#home {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-/*esta prueba es para ver el logo que actualmente tiene letras negras*/
+.footer {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  background-color:#222;
+  color: #9d9d9d;
+  display: flex;
+  justify-content: center;
+  width:40%;
+  border-radius: 100;
+}
+.container-footer {
+
+}

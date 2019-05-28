@@ -14,8 +14,6 @@ $navbar=[
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title></title>
   </head>
   <body>
@@ -55,12 +53,12 @@ $navbar=[
                 <?php foreach ($navbar as $titulo => $link) : ?>
       						<li><a href="<?php echo $link; ?>"> <?php echo $titulo; ?> </a></li>
       					<?php endforeach; ?>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
                 <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
 
-              </ul>
-            </div>
+          </ul>
+        </div>
           </div>
         </nav>
         </div><br>
@@ -69,4 +67,6 @@ $navbar=[
 
   </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>
