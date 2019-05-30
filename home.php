@@ -8,11 +8,11 @@
 
   </head>
   <body>
-    <?php include("header.php") ?>
-    <div id="home">
+    <?php require("header.php") ?>
+    <div class="home">
     <img src="img\logoblanco.png" alt="logo completo">
     <h1>Somos Growla, una empresa que crece sobre dos pilares fundamentales: el amor por la birra y la amistad. </h1>
     </div>
-    <<?php include("footer.php") ?>
+    <?php require("footer.php") ?>
   </body>
 </html>

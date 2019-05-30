@@ -8,46 +8,117 @@
   padding: 0px;
   margin: 0px;
   border-radius: 100;
-  padding: 0px;
-}
-.containerheader{
-  width:1140px;
-  margin:auto;
-  padding:0px;
-  background-color: black;
 }
 body {
-  background-color: black;
+    background-color: black;
 }
+  .containerheader{
+    max-width: 480px;
+    margin:auto;
+    padding:0px;
+    background-color: black;
+  }
+.home {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
 h1 {
-  font-family: sans-serif;
-  text-align: center;
-  color: white;
-  margin: auto;
-  width: 50%;
-  padding: 20px;
-}
-#home {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.footer {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  justify-content: space-around;
-}
-footer {
-  background-color:#222;
-  color: #9d9d9d;
-  display: flex;
-  justify-content: center;
-  width:40%;
-  border-radius: 100;
-}
-.container-footer {
+    font-family: sans-serif;
+    color: white;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
 
+footer  ul {
+    list-style: none;
+    color: #9d9d9d;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #222;
+    width: 230px;
+    height: 70px;
+    border: 1px ;
+    border-color: black;
+    border-radius: 4px;
+    padding-left: 15px;
+
+  }
+
+  .iconos {
+      display:flex;
+      justify-content: space-around;
+      list-style: none;
+      color: #9d9d9d;
+      width: max-content;
+    }
+
+  .iconos li {
+    margin-right: 15px;
+  }
+@media (min-width:480px) {
+  .containerheader{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .home {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+}
+@media (min-width:768px) {
+  footer  ul {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px auto;
+      width: 70%;
+      height: 40px;
+
+    }
+}
+
+@media (min-width:992px) {
+  .containerheader{
+    max-width:80%;
+  }
+  .home {
+    max-width: 100%
+  }
+  h1 {
+    width: 65%;
+  }
+}
+
+  .id {
+    max-width:720px;
+    /*preguntar a javi*/
+  }
+.FAQ {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: : center;
+}
+
+.preguntasFAQ {
+  color: rgb(63, 154, 238);
+  font-size: 20px;
+  list-style: initial;
+
+}
+.respuestasFAQ {
+  color: white;
+  font-size: 18px;
+  list-style: none;
 }
