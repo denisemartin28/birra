@@ -49,8 +49,8 @@
 		<title>Listado de Productos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="/stylesheeet.css">
-		<link rel="stylesheet" href="/css-list-products.css">
+		<link rel="stylesheet" href="stylesheeet.css">
+		<link rel="stylesheet" href="css-list-products.css">
 
 
 
@@ -60,7 +60,7 @@
     <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <div class="panel panel-default text-center mt-3">
+      <div class="panel panel-default text-center mt-3" >
         <div class="panel-heading panel-title">BLONDE</div>
         <div class="panel-body"><img src="img/IMG-20190523-WA0105.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer"><a class="more stretched-link" href="articles.php">Ver más</a></div>
@@ -70,7 +70,7 @@
       <div class="panel panel-default text-center mt-3">
         <div class="panel-heading">IPA</div>
         <div class="panel-body"><img src="img/IMG-20190523-WA0105.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a class="more stretched-link" href="articles.php">Ver más</a></div>
+        <div class="panel-footer" class="footer"><a class="more stretched-link" href="articles.php">Ver más</a></div>
       </div>
     </div>
     <div class="col-sm-4">

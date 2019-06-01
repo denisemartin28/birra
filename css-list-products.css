@@ -2,29 +2,33 @@
   display: flex;
 }
 
-.panel .panel-default  {
-  background-color: #222;
+.panel {
+  background-color: #222 !important;
 }
 .panel-default {
 
 }
 
-.panel-heading .panel-title {
-  background-color: #808080;
-  color: #9d9d9d;
+.panel-heading {
+  background-color: #222 !important;
+  color: #9d9d9d !important;
   font-weight: bold;
 }
 
-.div > .panel-body {
-  color: #9d9d9d;
+.panel-body {
+  color: #222 !important;
 }
 
-.panel-footer{
-  background-color: #808080!important;
+.footer{
+  background-color: #222;
 }
 
 .more {
   background-color: #808080!important;
   font-weight: bold;
   color: #B22222;
+}
+
+.black{
+  background-color: black;
 }

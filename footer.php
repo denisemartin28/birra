@@ -16,7 +16,7 @@
               </div>
               <div class="iconos">
                 <li ><i class="fas fa-map-marker-alt"></i> </li>
-                <li>Bacacay 5665, Pilar</li>
+                <li>Bacacay 5665, CABA</li>
               </div>
               <div class="iconos">
               <li><i class="fas fa-envelope-open-text"></i></li>
