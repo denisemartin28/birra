@@ -20,8 +20,10 @@
 
 
 <div class="container-login">
+<div class="container-imagen">
 
-<h2>Login</h2>
+<img src="img/logonegropaint.png" alt="">
+</div>
 <div class="container-usuario">
 <form class="" action="index.html" method="post">
   <label for="">Usuario</label> <br>
@@ -47,7 +49,11 @@
 </div>
 
 </div>
-<?php require_once "../birra-master/footer.php" ?>
+
 </div>
+<br>
+<br>
+<?php require_once "../birra-master/footer.php" ?>
+
   </body>
 </html>
