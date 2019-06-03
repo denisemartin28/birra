@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+img {
+  width: 40%;
+  height: 70vh;
+  border-radius: 15px;
+
+}
+
+p {
+  font-size: 1.5em;
+  font-family: sans-serif allerta aleo;
+  padding-left: 40px;
+
+}
+h3 {
+  font-size: 2.5em;
+  padding-left: 40px;
+}
+
+ul {
+  font-size: 1.5em;
+  padding-left: 40px;
+}
+
+
+.container-products {
+  background-color: rgba(241, 218, 174, 0.94);
+
+  max-width: 100%;
+
+
+  border-radius: 12px;
+
+
+  display: flex;
+  flex-direction: column;
+
+
+
+
+}
+
+.articles {
+  width: 100%;
+
+  padding: 10px;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-flex;
+
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.description {
+
+  flex-direction: column;
+}
