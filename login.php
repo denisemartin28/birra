@@ -1,45 +1,53 @@
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
 <link rel="stylesheet" href="login.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title></title>
   </head>
   <body>
+<header>
 
-<form class="login" action="index.html" method="post">
-<div class="container">
+
+<?php require_once "../birra-master/header.php" ?>
+</header>
+<div class="container-principal">
+
 
 
 <div class="container-login">
 
-<h1>BIENVENIDA/O</h1>
-
-<div class="ingresar-datos">
-
-      <label  for="">Email: </label>
-      <input class="casillero"  type="email" id="email" name="email" value="">
-
+<h2>Login</h2>
+<div class="container-usuario">
+<form class="" action="index.html" method="post">
+  <label for="">Usuario</label> <br>
+  <input type="email" placeholder="Ingresar email" name="usuario" value="">
+</form>
 </div>
 
-<div class="ingresar-datos">
-    <label style= for="">Contraseña: </label>
-    <input class="casillero"  type="password" id="contraseña" name="contraseña" value="">
+<div class="container-contraseña">
+<form class="" action="index.html" method="post">
+  <label for="">Contraseña</label> <br>
+  <input type="password" placeholder="Ingresar contraseña" name="contraseña" value="">
+</form>
 </div>
-<div  class="container-boton">
-   <input class="casillero" type="submit" name="" id="boton" value="LOGIN">
+
+<div class="container-boton">
+<form class="" action="index.html" method="post">
+<input class="boton" type="submit" name="" value="Login">
+</form>
 </div>
 
 <div class="container-olvidaste">
-    <p> <a  href="#"> ¿Olvidaste tu contraseña? Clickea acá</a> </p>
+<a href="#">Olvidaste tu contraseña? Dame click</a>
 </div>
 
 
-
 </div>
 </div>
-</form>
-
   </body>
 </html>
