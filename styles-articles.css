@@ -26,7 +26,12 @@ h3 {
 
 ul {
   font-size: 1.5em;
-  padding-left: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+li {
+  display: flex;
 }
 
 
@@ -63,5 +68,6 @@ ul {
 
 .description {
 
+  display: flex;
   flex-direction: column;
 }
