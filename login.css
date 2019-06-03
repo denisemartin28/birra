@@ -1,0 +1,104 @@
+*{
+  font-family: helvetica;
+
+}
+body{
+  /*background-image: url(img/cerveza-artesanal.jpg);*/
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: white;
+/*height: 100vh;*/
+font-family: helvetica;
+}
+.container-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: #fff;
+}
+h2{
+  /*border: 1px solid white;*/
+  padding: 0;
+  background-color:#b80f22;
+
+}
+.container-login{
+padding: 10px;
+  background-color: rgba(0,0,0,0.9);
+border: 2px solid #fff;
+height: 350px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 15px;
+
+}
+.container-usuario{
+  /*border: 2px solid red;*/
+
+}
+.container-contraseña{
+/*  border: 2px solid violet;*/
+}
+.container-contraseña input
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  color:#fff;
+ font-size: 16px;
+}
+.container-login label{
+font-size: 16px;
+}
+.container-usuario input{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  color:#fff;
+font-size: 16px;
+}
+.container-boton input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.container-olvidaste a{
+  text-decoration: none;
+  font-size: 12px;
+  color: darkgrey;
+  line-height: 20px;
+}
+.container-olvidaste{
+  margin-left: : 2px;
+  margin-right: : 2px;
+  margin-bottom: 5px;
+}
+.container-olvidaste a:hover{
+  color: #fff;
+}
+.container-boton input:focus{
+  background-color: darkgrey;
+}
+.container-imagen img{
+  height: 50px;
+  width: 200px;
+
+}
+.container-imagen{
+  padding-bottom: 22px;
+}
