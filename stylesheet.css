@@ -127,23 +127,51 @@ footer  ul {
 
   .id {
     max-width:720px;
-    /*preguntar a javi*/
   }
+
 .FAQ {
   display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: : center;
+  max-width: 100%;
+  flex-direction:column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
-
+.h1FAQ {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.ul-faq {
+  padding: 0px;
+  margin: 0px;
+  max-width: 90%;
+}
 .preguntasFAQ {
-  color: rgb(63, 154, 238);
+  color: rgb(124, 118, 116);
   font-size: 20px;
-  list-style: initial;
-
-}
-.respuestasFAQ {
-  color: white;
-  font-size: 18px;
   list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.respuestasFAQ {
+  color: rgb(194, 190, 190);
+  font-size: 19px;
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+@media (min-width:768px) {
+  .respuestasFAQ {
+    max-width:70%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width:1200px) {
+  .respuestasFAQ {
+    max-width:60%;
+  }
 }
