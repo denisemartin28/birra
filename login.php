@@ -46,8 +46,8 @@
 <a href="#">Olvidaste tu contraseña? Dame click</a>
 </div>
 
-
 </div>
+<?php require_once "../birra-master/footer.php" ?>
 </div>
   </body>
 </html>
