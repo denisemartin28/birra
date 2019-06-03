@@ -1,6 +1,7 @@
 
 .jumbotron {
- margin-bottom: : 0;
+ padding-top: 0px;
+ padding-bottom: 0px;
  background-color: black;
 }
 .navbar {
@@ -13,13 +14,14 @@ body {
     background-color: black;
 }
 .containerheader{
-    min-width: 320px;
+    max-width: 320px;
     margin:auto;
     padding:0px;
     background-color: black;
   }
 .home {
-  width: 320px;
+  margin: auto;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,10 +29,14 @@ body {
 h1 {
     font-family: sans-serif;
     color: white;
-    margin: auto;
-    width: 100%;
+
+    font-size: 20px;
     text-align: center;
-    padding: 20px;
+
+    max-width: 95% ;
+  }
+  .growla {
+    max-width: 100%;
   }
 
 footer  ul {
@@ -63,10 +69,8 @@ footer  ul {
   .iconos li {
     margin-right: 15px;
   }
-  .logo-home{
-    width: 80%;
-  }
-@media (min-width:480px) {
+
+@media (min-width:320px) {
   .containerheader{
     max-width: 100%;
     margin: 0 auto;
@@ -77,9 +81,10 @@ footer  ul {
   flex-direction: column;
   align-items: center;
   }
-  .logo-home{
-    width: auto;
+  .growla {
+    max-width: 80%;
   }
+
 }
 @media (min-width:768px) {
   footer  ul {
@@ -91,12 +96,19 @@ footer  ul {
       width: 70%;
       height: 40px;
     }
-    .logo-home{
-      width: auto;
+    .home {
+      max-width: 100%
+    }
+    h1 {
+    font-size: 35px;
+    max-width: 70%;
+    }
+    .growla {
+      max-width: 80%;
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1200px) {
   .containerheader{
     max-width:80%;
   }
@@ -104,11 +116,13 @@ footer  ul {
     max-width: 100%
   }
   h1 {
-    width: 65%;
+  font-size: 40px;
+  max-width: 70%;
   }
-  .logo-home{
-    width: auto;
+  .growla {
+    max-width: 80%;
   }
+
 }
 
   .id {
