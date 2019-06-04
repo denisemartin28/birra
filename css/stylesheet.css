@@ -1,6 +1,13 @@
-
+/*edicion del header*/
+.containerheader{
+    max-width: 320px;
+    margin:auto;
+    padding:0px;
+    background-color: black;
+  }
 .jumbotron {
- margin-bottom: : 0;
+ padding-top: 0px;
+ padding-bottom: 0px;
  background-color: black;
 }
 .navbar {
@@ -9,17 +16,14 @@
   margin: 0px;
   border-radius: 100;
 }
+/*edicion del home*/
 body {
     background-color: black;
 }
-.containerheader{
-    min-width: 100%;
-    margin:auto;
-    padding:0px;
-    background-color: black;
-  }
+
 .home {
-  width: 320px;
+  margin: auto;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,12 +31,17 @@ body {
 h1 {
     font-family: sans-serif;
     color: white;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
 
+    font-size: 20px;
+    text-align: center;
+
+    max-width: 95% ;
+  }
+  /*edicion del logo del home*/
+  .growla {
+    max-width: 100%;
+  }
+/*edicion del footer*/
 footer  ul {
     list-style: none;
     color: #9d9d9d;
@@ -63,10 +72,8 @@ footer  ul {
   .iconos li {
     margin-right: 15px;
   }
-  .logo-home{
-    width: 80%;
-  }
-@media (min-width:480px) {
+
+@media (min-width:320px) {
   .containerheader{
     max-width: 100%;
     margin: 0 auto;
@@ -77,10 +84,12 @@ footer  ul {
   flex-direction: column;
   align-items: center;
   }
-  .logo-home{
-    width: auto;
+  .growla {
+    max-width: 80%;
   }
+
 }
+/*estilos segun viewport del header, home y footer*/
 @media (min-width:768px) {
   footer  ul {
       display:flex;
@@ -91,45 +100,81 @@ footer  ul {
       width: 70%;
       height: 40px;
     }
-    .logo-home{
-      width: auto;
+    .home {
+      max-width: 100%
+    }
+    h1 {
+    font-size: 35px;
+    max-width: 70%;
+    }
+    .growla {
+      max-width: 80%;
     }
 }
 
-@media (min-width:992px) {
-  .containerheader{
-    max-width:80%;
-  }
+@media (min-width:1200px) {
   .home {
     max-width: 100%
   }
   h1 {
-    width: 65%;
+  font-size: 40px;
+  max-width: 70%;
   }
-  .logo-home{
-    width: auto;
+  .growla {
+    max-width: 80%;
   }
+
 }
 
   .id {
     max-width:720px;
-    /*preguntar a javi*/
   }
+  /*edicion de la pagina de FAQ*/
+
 .FAQ {
   display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: : center;
+  max-width: 100%;
+  flex-direction:column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
-
+.h1FAQ {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.ul-faq {
+  padding: 0px;
+  margin: 0px;
+  max-width: 90%;
+}
 .preguntasFAQ {
-  color: rgb(63, 154, 238);
+  color: rgb(124, 118, 116);
   font-size: 20px;
-  list-style: initial;
-
-}
-.respuestasFAQ {
-  color: white;
-  font-size: 18px;
   list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.respuestasFAQ {
+  color: rgb(194, 190, 190);
+  font-size: 19px;
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+/*edicion segun viewport de la pagina de FAQ*/
+@media (min-width:768px) {
+  .respuestasFAQ {
+    max-width:70%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width:1200px) {
+  .respuestasFAQ {
+    max-width:60%;
+  }
 }
