@@ -10,6 +10,13 @@
  padding-bottom: 0px;
  background-color: black;
 }
+
+.carousel-inner img {
+  background-size: cover;
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .navbar {
   list-style: none;
   padding: 0px;
