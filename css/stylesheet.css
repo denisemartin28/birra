@@ -1,13 +1,14 @@
 /*edicion del header*/
 .containerheader{
     max-width: 100%;
-    margin:auto;
+    margin:auto 0px;
     padding:0px;
     background-color: black;
   }
 .jumbotron {
  padding-top: 0px;
  padding-bottom: 0px;
+ margin-bottom: 0px;
  background-color: black;
 }
 
@@ -29,7 +30,7 @@ body {
 }
 
 .home {
-  margin: auto;
+  margin: auto 10px;
   max-width: 320px;
   display: flex;
   flex-direction: column;
