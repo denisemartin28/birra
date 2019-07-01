@@ -1,14 +1,13 @@
 /*edicion del header*/
 .containerheader{
     max-width: 100%;
-    margin:auto 0px;
+    margin:auto;
     padding:0px;
     background-color: black;
   }
 .jumbotron {
  padding-top: 0px;
  padding-bottom: 0px;
- margin-bottom: 0px;
  background-color: black;
 }
 
@@ -30,7 +29,7 @@ body {
 }
 
 .home {
-  margin: auto 10px;
+  margin: auto;
   max-width: 320px;
   display: flex;
   flex-direction: column;
@@ -188,9 +187,51 @@ footer  ul {
     margin: auto;
     margin-bottom: 40px;
   }
+
+  li.dropdown-toggle {
+    align-content: left;
+  }
+
+  ul.dropdown-menu {
+    position: relative;
+    max-width: 40%;
+  }
+
+  div.pull-right {
+    right: -100%;
+  }
 }
 @media (min-width:1200px) {
   .respuestasFAQ {
     max-width:60%;
   }
+}
+
+.pull-right {
+  display: flex;
+}
+
+/* Css de la pag profile.php */
+div.pull-right {
+  background-color: #222 !important;
+}
+
+a#perfil.dropdown-toggle {
+  color: #9d9d9d !important;
+}
+
+ul.dropdown-menu {
+  background-color: #838383 !important;
+  position: absolute;
+  max-width: 50%;
+  text-align: left;
+  font-size: 14px;
+  justify-content: space-around;
+
+}
+
+.dropdown-menu>li>a {
+  font-weight: bold;
+  text-align: left;
+  justify-content: space-around;
 }
