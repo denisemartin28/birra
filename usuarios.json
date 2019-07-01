@@ -1,8 +1,18 @@
-[
-    {
-        "nombre": "Horacio",
-        "apellido": "safsf",
-        "email": "horiliceo@hotmail.com",
-        "contrase\u00f1a": "$2y$10$9RinR3BeiQ\/yA0OoeFoaa.5UkSjcPzxYXjCOTNpuNt6WiV8UffWmK"
-    }
-]
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Agustina",
+            "apellido": "Dorado",
+            "email": "agus.sr@hotmail.com",
+            "password": "$2y$10$AMw95H7z\/wNhvoNkeTCX\/.GcPQAY6yOAvnL24KzJanmmtQJHZ\/hcS"
+        },
+        {
+            "id": 2,
+            "nombre": "Pepito",
+            "apellido": "Perez",
+            "email": "pepitoperez@gmail.com",
+            "password": "$2y$10$CLsnLuKhPDSvYjXtREdJoe525MAygOLX\/AcBg\/tJT6P67O644O0zy"
+        }
+    ]
+}

@@ -14,6 +14,14 @@
 //ACA ESTAMOS EN GET
     include 'funciones.php';
 //DECLARO LAS VARIABLES VACIAS PARA LUEGO INGRESARLES EL NOMBRE POR POST.
+    $errorNombre = "";
+    $errorApellido = "";
+    $errorEmail = "";
+    $errorFoto = "";
+    $errorContrasenia = "";
+    $hayErrores = false;
+    $errores = 0;
+
     $nombreOk = "";
     $apellidoOk= "";
     $emailOk= "";
@@ -34,6 +42,8 @@
     //  var_dump($usuario);
 
       guardarUsuario($usuario);
+      // loguearUsuario($_POST["email"]);
+      header("Location:home.php");  //Redireccionamos al home
       exit;
     }
 
@@ -57,6 +67,7 @@
                 <?php else: ?>
                 <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value=" <?= $nombreOk ?>">
               <?php endif ?>
+              <?= $errorNombre ?>
 
 
 
@@ -71,6 +82,7 @@
             <?php else: ?>
               <input class="casillero" placeholder="Introduzca su apellido"  type="text" name="apellido"  value="<?= $apellidoOk ?>">
             <?php endif ?>
+            <?= $errorApellido ?>
           </div>
 
           <div class="ingresar-datos">
@@ -81,6 +93,7 @@
           <?php else: ?>
                   <input class="casillero" placeholder="Introduzca su e-mail"  type="email" name="email"  value="<?= $emailOk ?>">
                   <?php endif ?>
+                  <?= $errorEmail ?>
           </div>
 
           <div class="ingresar-datos">
@@ -95,11 +108,12 @@
           <div class="ingresar-datos">
             <label style= for=""> Contraseña </label> <br>
 
-            <input class="casillero" placeholder="Introduzca contraseña"  type="password" name="contraseña"  value="">
+            <input class="casillero" placeholder="Introduzca contraseña"  type="password" name="contrasenia"  value="">
 
-          <?php   if (isset($errores["contraseña"])): ?>
-                  <?= $errores["contraseña"] ?>
+          <?php   if (isset($errores["password"])): ?>
+                  <?= $errores["password"] ?>
                 <?php endif ?>
+                <?= $errorContrasenia ?>
           </div>
 
           <div class="ingresar-datos">
@@ -109,6 +123,12 @@
             <?php if (isset($errores["confirmarContra"])): ?>
                   <?= $errores["confirmarContra"] ?>
                 <?php endif ?>
+          </div>
+
+          <div class="">
+            <label for="">Foto de perfil</label>
+            <input type="file" name="foto" value="">
+            <?= $errorFoto ?>
           </div>
           <br>
 

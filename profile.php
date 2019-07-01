@@ -8,7 +8,7 @@
 
 <body>
   <?php require_once "header.php" ?>
-  <div class="container" style="align-items: center;">
+  <div class="container" style="align-items: center; ">
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-6">
             <div class="well well-sm" id="well">
@@ -33,14 +33,7 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary">
                                 Editar</button>
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span><span class="sr-only">Social</span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="">Configuración</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Cerrar Sesión</a></li>
-                           </ul>
+
                         </div>
                     </div>
                 </div>

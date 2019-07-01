@@ -54,10 +54,18 @@ $navbar=[
       						<li><a href="<?php echo $link; ?>"> <?php echo $titulo; ?> </a></li>
       					<?php endforeach; ?>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-                <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
-
-          </ul>
+          <div class="pull-right">
+                <ul class="nav pull-right">
+                    <li  class="dropdown"><a href="profile.php" class="dropdown-toggle" data-toggle="dropdown" id="perfil">Perfil<b class="caret"></b></a>
+                        <ul style="left: -100%;" class="dropdown-menu">
+                            <li><a href="profile.php"><i class="icon-cog" ></i>Ver mi perfil</a></li>
+                            <li><a href="#"><i class="icon-envelope" id="help"></i>Ayuda</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-off" id="logout"></i>Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+          </div>
         </div>
           </div>
         </nav>
