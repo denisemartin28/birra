@@ -70,7 +70,7 @@
                 </div>
 
               <?php else: ?>
-                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="" <?= $nombreOk ?>">
+                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value=" <?= $nombreOk ?>">
               <?php endif ?>
               <?= $errorNombre ?>
           </div>
