@@ -35,7 +35,7 @@
       $nombreOk = trim($_POST["nombre"]);
       $apellidoOk = trim($_POST["apellido"]);
       $emailOk = trim($_POST["email"]);
-      $paisOk = $_POST["code"];
+      $paisOk = $_POST["pais"];
 
 
     if (!$errores) {
@@ -142,7 +142,7 @@
             <select class="casillero" name="pais">
               <option value="" class="pais">Elija un país</option>
               <?php foreach ($countries as $code => $country) : ?>
-                <option class="pais" value="<?= $code ?>"> <?= $country ?> </option>
+                <option class="pais" <?= isset($_POST['pais']) && $_POST['pais'] == $code ? 'selected' : '' ?> value="<?= $code ?>"> <?= $country ?> </option>
               <?php endforeach; ?>
             </select>
           </div>
@@ -151,7 +151,7 @@
             <label for="">Foto de perfil</label>
             <input type="file" name="foto" value="">
             <div class="rojo">
-              <?= $errores["$errorFoto"] ?>
+            <!--  <?= $errores["$errorFoto"] ?>  -->
             </div>
           </div>
           <br>

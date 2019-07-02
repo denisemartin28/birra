@@ -13,7 +13,8 @@ function validarRegistro($datos)
 
   $contrasenia = trim($datos["contrasenia"]);
   $confirmarcontrasenia = trim($datos["confirmarContra"]);
-  $pais=$datos["code"];
+  $pais=$datos["pais"];
+
   //VALIDACION DE CADA DATO
   if ($nombre == "") {
     $errores["nombre"] = "Completa tu nombre";
@@ -53,14 +54,12 @@ function validarRegistro($datos)
       $errores["rePassword"] = "Confirmá la contraseña";
 
     }
-    return $errores;
-    }
     if ($pais == ""){
       $errores["pais"] = "Completá tu país";
 
     }
     return $errores;
-
+}
 //Busca el último ID registrado en json
   function nextId(){
     $json = file_get_contents("usuarios.json");
