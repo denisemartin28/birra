@@ -8,7 +8,7 @@
 
   <body>
     <?php require_once "header.php" ?>
-
+    <?php require_once "paises.php" ?>
 
     <?php
 //ACA ESTAMOS EN GET
@@ -34,6 +34,7 @@
       $nombreOk = trim($_POST["nombre"]);
       $apellidoOk = trim($_POST["apellido"]);
       $emailOk = trim($_POST["email"]);
+      $paisOk = $_POST["pais"];
 
 
     if (!$errores) {
@@ -48,7 +49,7 @@
     }
 
    }
-     ?>
+?>
 
     <div class="container-imagen">
       <img src="img/logonegropaint.png" alt="">
@@ -61,16 +62,13 @@
         <div class="container-login">
           <div class="ingresar-datos">
             <label  for="">Nombre </label> <br>
-              <?php  if (isset($errores["nombre"])): ?>
-<input class="casillero" placeholder="Introduzca su nombre"  type="text"  name="nombre" value="">
-                  <?= $errores["nombre"] ?>
-                <?php else: ?>
-                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value=" <?= $nombreOk ?>">
+              <?php  if (isset($errores["nombre"])):?>
+                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="">
+              <?= $errores["nombre"] ?>
+              <?php else: ?>
+                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="" <?= $nombreOk ?>">
               <?php endif ?>
               <?= $errorNombre ?>
-
-
-
           </div>
 
 
@@ -97,7 +95,7 @@
           </div>
 
           <div class="ingresar-datos">
-            <label style= for="">Confirme e-mail </label> <br>
+            <label style= for="">Confirmá tu e-mail </label> <br>
             <input class="casillero" placeholder="Repita su e-mail"  type="email" name="confirmarEmail"  value="">
 
             <?php if (isset($errores["email"])): ?>
@@ -117,7 +115,7 @@
           </div>
 
           <div class="ingresar-datos">
-            <label style= for=""> Confirme contraseña </label> <br>
+            <label style= for=""> Confirmá la contraseña </label> <br>
             <input class="casillero" placeholder="Repita la contraseña"  type="password" name="confirmarContra"  value="">
 
             <?php if (isset($errores["confirmarContra"])): ?>
@@ -125,7 +123,17 @@
                 <?php endif ?>
           </div>
 
-          <div class="">
+          <div class="ingresar-datos">
+            <label>Seleccioná tu país </label> <br>
+            <select class="casillero" name="pais">
+              <option value="" class="pais">Elija un país</option>
+              <?php foreach ($countries as $code => $country) : ?>
+                <option class="pais" value="<?= $code ?>"> <?= $country ?> </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+
+          <div class="ingresar-datos">
             <label for="">Foto de perfil</label>
             <input type="file" name="foto" value="">
             <?= $errorFoto ?>
