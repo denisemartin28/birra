@@ -25,6 +25,7 @@
     $nombreOk = "";
     $apellidoOk= "";
     $emailOk= "";
+    $paisOk="";
     if ($_POST) {
 
 // ACA EMPIEZA EL POST
@@ -34,7 +35,7 @@
       $nombreOk = trim($_POST["nombre"]);
       $apellidoOk = trim($_POST["apellido"]);
       $emailOk = trim($_POST["email"]);
-      $paisOk = $_POST["pais"];
+      $paisOk = $_POST["code"];
 
 
     if (!$errores) {
@@ -64,7 +65,10 @@
             <label  for="">Nombre </label> <br>
               <?php  if (isset($errores["nombre"])):?>
                 <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="">
-              <?= $errores["nombre"] ?>
+                <div class="rojo">
+                  <?= $errores["nombre"] ?>
+                </div>
+
               <?php else: ?>
                 <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="" <?= $nombreOk ?>">
               <?php endif ?>
@@ -76,7 +80,9 @@
             <label for="">Apellido </label> <br>
             <?php if (isset($errores["apellido"])): ?>
             <input class="casillero" placeholder="Introduzca su apellido"  type="text" name="apellido"  value="">
+            <div class="rojo">
               <?= $errores["apellido"] ?>
+            </div>
             <?php else: ?>
               <input class="casillero" placeholder="Introduzca su apellido"  type="text" name="apellido"  value="<?= $apellidoOk ?>">
             <?php endif ?>
@@ -87,7 +93,9 @@
             <label style= for="">E-mail </label> <br>
             <?php if (isset($errores["email"])): ?>
             <input class="casillero" placeholder="Introduzca su e-mail"  type="email" name="email"  value="">
-            <?= $errores["email"] ?>
+            <div class="rojo">
+              <?= $errores["email"] ?>
+            </div>
           <?php else: ?>
                   <input class="casillero" placeholder="Introduzca su e-mail"  type="email" name="email"  value="<?= $emailOk ?>">
                   <?php endif ?>
@@ -99,7 +107,9 @@
             <input class="casillero" placeholder="Repita su e-mail"  type="email" name="confirmarEmail"  value="">
 
             <?php if (isset($errores["email"])): ?>
-                  <?= $errores["email"] ?>
+              <div class="rojo">
+                <?= $errores["confirmarEmail"] ?>
+              </div>
                 <?php endif ?>
           </div>
 <!-- CONTRASEÑA con mas de 5 letras - SIN ESPACIOS - DEBE TENER LETRAS DH.-->
@@ -109,7 +119,9 @@
             <input class="casillero" placeholder="Introduzca contraseña"  type="password" name="contrasenia"  value="">
 
           <?php   if (isset($errores["password"])): ?>
-                  <?= $errores["password"] ?>
+            <div class="rojo">
+              <?= $errores["password"] ?>
+            </div>
                 <?php endif ?>
                 <?= $errorContrasenia ?>
           </div>
@@ -118,8 +130,10 @@
             <label style= for=""> Confirmá la contraseña </label> <br>
             <input class="casillero" placeholder="Repita la contraseña"  type="password" name="confirmarContra"  value="">
 
-            <?php if (isset($errores["confirmarContra"])): ?>
-                  <?= $errores["confirmarContra"] ?>
+            <?php if (isset($errores["rePassword"])): ?>
+              <div class="rojo">
+                <?= $errores["rePassword"] ?>
+              </div>
                 <?php endif ?>
           </div>
 
@@ -136,7 +150,9 @@
           <div class="ingresar-datos">
             <label for="">Foto de perfil</label>
             <input type="file" name="foto" value="">
-            <?= $errorFoto ?>
+            <div class="rojo">
+              <?= $errores["$errorFoto"] ?>
+            </div>
           </div>
           <br>
 

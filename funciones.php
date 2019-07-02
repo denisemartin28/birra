@@ -13,14 +13,14 @@ function validarRegistro($datos)
 
   $contrasenia = trim($datos["contrasenia"]);
   $confirmarcontrasenia = trim($datos["confirmarContra"]);
-
+  $pais=$datos["code"];
   //VALIDACION DE CADA DATO
   if ($nombre == "") {
-    $errores["nombre"] = "Completa con un nombre";
+    $errores["nombre"] = "Completa tu nombre";
     //SI EL NOMBRE ESTA VACIO,LARGA ESTE MENSAJE
   }
   if ($apellido == "") {
-    $errores["apellido"] = "Completa con un apellido";
+    $errores["apellido"] = "Completa tu apellido";
     //SI EL APELLIDO ESTA VACIO, LARGA ESTE MENSAJE.
   }
   if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -38,22 +38,28 @@ function validarRegistro($datos)
 }
     if ($contrasenia == ""){
       $errores["password"] = "Completa la contraseña";
-
     }
     else if (strlen($contrasenia)<4)
     {
       $errores["password"] = "Escribe al menos 4 caracteres";
 
+    }elseif (strstr($contrasenia,'DH') ==false) {
+      $errores["password"] = "La constraseña debe contener las letras DH";
     }else if($contrasenia != $confirmarcontrasenia){
-      $errores["password"] = "Las contraseñas no coinciden";
+      $errores["rePassword"] = "Las contraseñas no coinciden";
 
     }
     if ($confirmarcontrasenia == ""){
-      $errores["password"] = "Completa la contraseña";
+      $errores["rePassword"] = "Confirmá la contraseña";
 
     }
     return $errores;
     }
+    if ($pais == ""){
+      $errores["pais"] = "Completá tu país";
+
+    }
+    return $errores;
 
 //Busca el último ID registrado en json
   function nextId(){
@@ -79,6 +85,7 @@ function validarRegistro($datos)
     "email" => trim($_POST["email"]),
     //        "foto" => $_FILES["foto"], LA COMENTO PORQUE TODAVIA NO ESTA LA OPCION DE CARGAR FOTO
     "password" => password_hash($_POST["contrasenia"], PASSWORD_DEFAULT),
+    "pais" => $_POST["pais"]
     //HASHEO LA CONTRASEÑA PARA QUE NO SE PUEDA VER
   ];
 
