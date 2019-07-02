@@ -14,6 +14,7 @@ function validarRegistro($datos)
   $contrasenia = trim($datos["contrasenia"]);
   $confirmarcontrasenia = trim($datos["confirmarContra"]);
   $pais=$datos["pais"];
+  // uso el valor del name de select
 
   //VALIDACION DE CADA DATO
   if ($nombre == "") {

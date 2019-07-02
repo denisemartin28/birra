@@ -31,6 +31,7 @@
 // ACA EMPIEZA EL POST
 
       $errores = validarRegistro($_POST);
+      var_dump($errores);
       //EMPIEZA EL ENVIO POR POST
       $nombreOk = trim($_POST["nombre"]);
       $apellidoOk = trim($_POST["apellido"]);
@@ -70,7 +71,7 @@
                 </div>
 
               <?php else: ?>
-                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value=" <?= $nombreOk ?>">
+                <input class="casillero" placeholder="Introduzca su nombre"  type="text" name="nombre"  value="<?= $nombreOk ?>">
               <?php endif ?>
               <?= $errorNombre ?>
           </div>
@@ -145,6 +146,11 @@
                 <option class="pais" <?= isset($_POST['pais']) && $_POST['pais'] == $code ? 'selected' : '' ?> value="<?= $code ?>"> <?= $country ?> </option>
               <?php endforeach; ?>
             </select>
+            <?php if (isset($errores["pais"])): ?>
+              <div class="rojo">
+                <?= $errores["pais"] ?>
+              </div>
+                <?php endif ?>
           </div>
 
           <div class="ingresar-datos">
