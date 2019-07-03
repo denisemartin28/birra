@@ -26,12 +26,14 @@
     $apellidoOk= "";
     $emailOk= "";
     $paisOk="";
+    $fotoOk="";
+
     if ($_POST) {
 
 // ACA EMPIEZA EL POST
 
       $errores = validarRegistro($_POST);
-      var_dump($errores);
+      // var_dump($errores);
       //EMPIEZA EL ENVIO POR POST
       $nombreOk = trim($_POST["nombre"]);
       $apellidoOk = trim($_POST["apellido"]);
@@ -44,12 +46,19 @@
       $usuario = armarUsuario();
     //  var_dump($usuario);
 
+    //Guardamos la imagen y obtenemos el nombre
+    $imgName = saveImage($_FILES['foto']);
+
+    //Le asignamos a $_POST una posición "foto"
+    $_POST['laImagenFinal'] = $imgName;
+
       guardarUsuario($usuario);
       // loguearUsuario($_POST["email"]);
       header("Location:home.php");  //Redireccionamos al home
       exit;
     }
 
+  
    }
 ?>
 
@@ -57,7 +66,6 @@
       <img src="img/logonegropaint.png" alt="">
     </div>
 
-<!-- Falta PAIS DE NACIMIENTO E IMAGEN DE PERFIL -->
 
     <form class="login" action="register.php" method="post" enctype="multipart/form-data">
       <div class="container">
@@ -155,10 +163,12 @@
 
           <div class="ingresar-datos">
             <label for="">Foto de perfil</label>
-            <input type="file" name="foto" value="">
+            <input type="file" name="foto" value="<?= $fotoOk ?>">
+            <?php if (isset($errores['foto'])) : ?>
             <div class="rojo">
-            <!--  <?= $errores["$errorFoto"] ?>  -->
+            <?= $errores['foto']; ?>
             </div>
+            <?php endif; ?>
           </div>
           <br>
 

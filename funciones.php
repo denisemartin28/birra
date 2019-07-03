@@ -14,6 +14,7 @@ function validarRegistro($datos)
   $contrasenia = trim($datos["contrasenia"]);
   $confirmarcontrasenia = trim($datos["confirmarContra"]);
   $pais=$datos["pais"];
+  $foto = $_FILES["foto"];
   // uso el valor del name de select
 
   //VALIDACION DE CADA DATO
@@ -59,6 +60,18 @@ function validarRegistro($datos)
       $errores["pais"] = "Completá tu país";
 
     }
+    // Si no subieron foto
+		if ($foto['error'] != UPLOAD_ERR_OK) {
+			$errores['foto'] = 'Elegí foto de perfil';
+		} else {
+			// Entro aquí siempre que hayan subido un archivo
+			$ext = pathinfo($foto['name'], PATHINFO_EXTENSION);
+
+			if ( $ext != 'jpg' && $ext != 'png' && $ext != 'gif' ) {
+				$errores['foto'] = 'Las extensiones permitidas son JPG, PNG y GIF';
+			}
+		}
+
     return $errores;
 }
 //Busca el último ID registrado en json
@@ -122,6 +135,25 @@ function buscarUsuarioPorEmail($email){
 function existeUsuario($email){
   return buscarUsuarioPorEmail($email) !== null; //si buscar por email encontró un usuario, te devuelve el usuario/true, sino null
 }
+
+function saveImage($file) {
+		//Obtenemos el nombre de la imagen
+		$name = $file['name'];
+
+		//Obtenemos la extensión del nombre de la imagen
+		$ext = pathinfo($name, PATHINFO_EXTENSION);
+
+		// Armo el nombre único y la ruta final del archivo
+		$finalPath = 'archivos/' . uniqid('img-') . "." . $ext;
+
+		//Obtengo el archivo temporal que tiene PHP en memoria
+		$tempFile = $file['tmp_name'];
+
+		//Subo el archivo a mi destino FINAL
+		move_uploaded_file($tempFile,  $finalPath);
+
+		return $finalPath;
+	}
 
 
 

@@ -5,22 +5,8 @@
             "nombre": "Agustina",
             "apellido": "Dorado",
             "email": "agus.sr@hotmail.com",
-            "password": "$2y$10$AMw95H7z\/wNhvoNkeTCX\/.GcPQAY6yOAvnL24KzJanmmtQJHZ\/hcS"
-        },
-        {
-            "id": 2,
-            "nombre": "Pepito",
-            "apellido": "Perez",
-            "email": "pepitoperez@gmail.com",
-            "password": "$2y$10$CLsnLuKhPDSvYjXtREdJoe525MAygOLX\/AcBg\/tJT6P67O644O0zy"
-        },
-        {
-            "id": 3,
-            "nombre": "denise",
-            "apellido": "martin",
-            "email": "denmartiin@gmail.com",
-            "password": "$2y$10$uI1TeYuWAqg20YmJjnM3.eHDMb4JJPV7yPVkF2EPEBIG4JoMTpczS",
-            "pais": ""
+            "password": "$2y$10$Gl8kupdGozylYvdjYn9Rou9xFPi0Ksz41EI.0LkopWIQHww5mzHFm",
+            "pais": "AU"
         }
     ]
 }
