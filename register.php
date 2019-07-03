@@ -58,7 +58,7 @@
       exit;
     }
 
-  
+
    }
 ?>
 
@@ -115,7 +115,7 @@
             <label style= for="">Confirmá tu e-mail </label> <br>
             <input class="casillero" placeholder="Repita su e-mail"  type="email" name="confirmarEmail"  value="">
 
-            <?php if (isset($errores["email"])): ?>
+            <?php if (isset($errores["confirmarEmail"])): ?>
               <div class="rojo">
                 <?= $errores["confirmarEmail"] ?>
               </div>
