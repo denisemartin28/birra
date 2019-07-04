@@ -35,7 +35,7 @@ font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   border-radius: 20px;
   color: #f5f5f5;
 
@@ -62,6 +62,9 @@ font-size: 16px;
   padding: 0;
   margin: 0;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .container-olvidaste{
   text-align: center;
@@ -115,8 +118,9 @@ text-align: center;
       justify-content: center;
       flex-wrap: wrap;
       border-radius: 20px;
-      width: 650px;
-  }
+      width: 550px;
+      height: 700px;
+    }
 
 .container-imagen img{
   height: 150px;
