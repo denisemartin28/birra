@@ -7,6 +7,14 @@
             "email": "agus.sr@hotmail.com",
             "password": "$2y$10$Gl8kupdGozylYvdjYn9Rou9xFPi0Ksz41EI.0LkopWIQHww5mzHFm",
             "pais": "AU"
+        },
+        {
+            "id": 2,
+            "nombre": "Alexis",
+            "apellido": "Barrientos",
+            "email": "alexis@lala.com",
+            "password": "$2y$10$e3aCb75cYTOScCHaEzI1h.RU0VpqD48riCnbN7tyVLOXwtKOnANGW",
+            "pais": "AR"
         }
     ]
 }

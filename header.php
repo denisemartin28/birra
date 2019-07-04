@@ -61,7 +61,7 @@ $navbar=[
                             <li><a href="profile.php"><i class="icon-cog" ></i>Ver mi perfil</a></li>
                             <li><a href="#"><i class="icon-envelope" id="help"></i>Ayuda</a></li>
                             <li class="divider"></li>
-                            <li><a href="#"><i class="icon-off" id="logout"></i>Cerrar Sesión</a></li>
+                            <li><a href="logout.php"><i class="icon-off" id="logout"></i>Cerrar Sesión</a></li>
                         </ul>
                     </li>
                 </ul>

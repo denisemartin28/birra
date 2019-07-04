@@ -156,5 +156,20 @@ function saveImage($file) {
 	}
 
 
+// Funcion de logueo
+function loguearUsuario($usuario)
+{
+  //$usuario va a ser un array con todos los datos del usuario
+  //eliminamos la posición password para no tener ese dato en sesión
+  unset($usuario['password']);
+  //en sesión guardo a todo el usuario (array), para poder acceder a todos sus datos
+  $_SESSION["usuario"] = $usuario;
+  //lo redireccionas a la home o al perfil
+  header('location: home.php');
+  //para cortar la ejecución
+  exit;
+}
+
+
 
  ?>
