@@ -1,6 +1,6 @@
 <!DOCTYPE>
 
- 
+
  <?php
  //preguntamos si está seteada la cookie para hacerle el loguin automáticamente
 if(isset($_COOKIE['email'])) {
@@ -65,7 +65,7 @@ if($_POST){
         </div>
 
         <div class="container-boton">
-          <form class="" action="index.html" method="post">
+          <form class="" action="profile.php" method="post">
             <input class="boton" type="submit" name="" value="Login">
           </form>
         </div>

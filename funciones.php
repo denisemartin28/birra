@@ -163,11 +163,16 @@ function loguearUsuario($usuario)
   //eliminamos la posición password para no tener ese dato en sesión
   unset($usuario['password']);
   //en sesión guardo a todo el usuario (array), para poder acceder a todos sus datos
-  $_SESSION["usuario"] = $usuario;
-  //lo redireccionas a la home o al perfil
-  header('location: home.php');
+  $_SESSION["usuarioLogueado"] = $usuario;
+  //lo redirecciono al perfil
+  header('location: profile.php');
   //para cortar la ejecución
   exit;
+}
+
+function estaLogueado()
+{
+  return isset($_SESSION['usuario']);
 }
 
 
