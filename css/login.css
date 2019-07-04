@@ -97,8 +97,21 @@ font-size: 16px;
 .container-imagen img{
   height: 50px;
   width: 200px;
-
 }
+/*AGREGAR ESTO AL FINAL */
+.container-boton input:hover{
+  background-color: #b80f22;
+  /*color: black;*/
+  opacity: 0.7;
+}
+
+
 .container-imagen{
   padding-bottom: 22px;
+}
+@media only screen and (min-width: 768px) {
+/* HACER ESTE CAMBIO EN EL ORIGINAL*/
+.container-login {
+  height: 400px;
+}
 }
