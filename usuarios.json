@@ -15,6 +15,24 @@
             "email": "alexis@lala.com",
             "password": "$2y$10$e3aCb75cYTOScCHaEzI1h.RU0VpqD48riCnbN7tyVLOXwtKOnANGW",
             "pais": "AR"
+        },
+        {
+            "id": 3,
+            "nombre": "Maru",
+            "apellido": "Gar",
+            "email": "maru@dh.com",
+            "foto": "archivos\/img-5d1e73b7ee357.jpg",
+            "password": "$2y$10$ywmK\/F8x69AW3x1jfEZVXOIm6My31IgTLUEzl\/QFOz0hLTaBCPZra",
+            "pais": "AT"
+        },
+        {
+            "id": 4,
+            "nombre": "Maru",
+            "apellido": "Gar",
+            "email": "maru2@gh.com",
+            "foto": "archivos\/img-5d1e752da23d9.jpg",
+            "password": "$2y$10$WvJhQztQHaggOvbuGRF0deEmGQaRNfxGuscFJ6WJSLnyVoBAH54Zy",
+            "pais": "AL"
         }
     ]
 }

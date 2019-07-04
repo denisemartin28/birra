@@ -48,11 +48,12 @@
 
     //Guardamos la imagen y obtenemos el nombre
     $imgName = saveImage($_FILES['foto']);
-
+    $usuario['foto'] = $imgName;
     //Le asignamos a $_POST una posición "foto"
-    $_POST['laImagenFinal'] = $imgName;
+    //$_POST['laImagenFinal'] = $imgName;
 
       guardarUsuario($usuario);
+
       // loguearUsuario($_POST["email"]);
       header("Location:home.php");  //Redireccionamos al home
       exit;

@@ -27,7 +27,15 @@
 body {
     background-color: black;
 }
-
+.lista {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+.collapse navbar-collapse {
+  
+}
 .home {
   margin: auto;
   max-width: 320px;
@@ -106,7 +114,7 @@ para que cuando se achique la pág todo se vea del lado izquierdo*/
 
   ul.dropdown-menu {
     position: relative;
-    
+
   }
 }
 

@@ -29,10 +29,10 @@
             <div class="well well-sm" id="well">
                 <div class="row" id="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="<?= $usuario['nombre'] ?>"  alt="imagen de usuario" class="img-rounded img-responsive" />
+                        <img src="<?= $usuario['foto'] ?>"  alt="imagen de usuario" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h4><?= $usuario['nombre' . 'apellido'] ?> ?></h4>
+                        <h4><?= $usuario['nombre'] . ' ' .$usuario['apellido'] ?></h4>
 
                         <small>Birra fan lvl 9000 <i class="fas fa-beer"></i></small>
                       <br />

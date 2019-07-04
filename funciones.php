@@ -96,7 +96,7 @@ function validarRegistro($datos)
     "nombre" => trim($_POST["nombre"]),
     "apellido" => trim($_POST["apellido"]),
     "email" => trim($_POST["email"]),
-    //        "foto" => $_FILES["foto"], LA COMENTO PORQUE TODAVIA NO ESTA LA OPCION DE CARGAR FOTO
+    "foto" => '',
     "password" => password_hash($_POST["contrasenia"], PASSWORD_DEFAULT),
     "pais" => $_POST["pais"]
     //HASHEO LA CONTRASEÑA PARA QUE NO SE PUEDA VER
@@ -156,6 +156,57 @@ function saveImage($file) {
 	}
 
 
+
+  function existeEmail($email){
+//  Traigo a todos los usuarios
+    $json = file_get_contents("usuarios.json");
+
+
+		$allUsers = json_decode($json, true);
+		//  Recorrer el array y preguntar si está el email
+		foreach ($allUsers as $oneUser) {
+			if ($oneUser["email"] == $email) {
+				return true;
+			}
+		}
+		// 3. Si no encuentro el email
+		return false;
+	}
+
+
+  function validarLogin() {
+		// Creo un array de errores vacío
+		$error = [];
+		// Guardo lo que vino en post en la posición 'name'
+		$email = trim($_POST['usuario']);
+		$password = trim($_POST['contrasenia']);
+		// Si $email está vació
+		if ( empty($email) ) {
+			// Seteo en el array de errores la posición 'inEmail'
+			$error['inEmail'] = 'El campo correo electrónico es obligatorio';
+		} elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) { // Si NO es un formato de correo electrónico
+			$error['inEmail'] = 'Escribí un formato de correo válido';
+		} elseif ( !existeEmail($email) ) {
+			$error['inEmail'] = 'Ese usuario no está registrado';
+		} else {
+			// Si el email existe en mi DB, traigo toda la data del usuario
+			$theUser = buscarUsuarioPorEmail($email);
+			if ( !password_verify($password, $theUser['contrasenia']) ) {
+				$error['inPassword'] = 'Las crendenciales no coinciden';
+			}
+		}
+		// Si $password está vació
+		if ( empty($password) ) {
+			// Seteo en el array de errores la posición 'inPassword'
+			$error['inPassword'] = 'La contraseña no puede estar vacía';
+		} elseif ( strlen($password) < 5 ) { // Si la longitud es inferior a 5 caracteres
+			$error['inPassword'] = 'La contraseña debe tener 5 letras o más';
+		}
+
+		return $error;
+  }
+
+
 // Funcion de logueo
 function loguearUsuario($usuario)
 {
@@ -163,7 +214,7 @@ function loguearUsuario($usuario)
   //eliminamos la posición password para no tener ese dato en sesión
   unset($usuario['password']);
   //en sesión guardo a todo el usuario (array), para poder acceder a todos sus datos
-  $_SESSION["usuarioLogueado"] = $usuario;
+  $_SESSION["usuario"] = $usuario;
   //lo redirecciono al perfil
   header('location: profile.php');
   //para cortar la ejecución
@@ -176,5 +227,4 @@ function estaLogueado()
 }
 
 
-
- ?>
+?>

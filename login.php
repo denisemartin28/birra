@@ -2,6 +2,8 @@
 
 
  <?php
+ include 'funciones.php';
+
  //preguntamos si está seteada la cookie para hacerle el loguin automáticamente
 if(isset($_COOKIE['email'])) {
   //busco al usuario por email
@@ -11,7 +13,7 @@ if(isset($_COOKIE['email'])) {
 }
 
 if($_POST){
-
+  var_dump(validarLogin());
   //llamamos a la función buscarUsuarioPorEmail y le pasás el mail que te vino por post
   //la función devuleve al usuario si lo encuentra, o null si no lo encuentra
   $usuario = buscarUsuarioPorEmail($_POST['usuario']);
@@ -49,33 +51,35 @@ if($_POST){
         <div class="container-imagen">
           <img src="img/logonegropaint.png" alt="">
         </div>
+        <form class="" action="" method="post">
+          <div class="container-usuario">
 
-        <div class="container-usuario">
-          <form class="" action="index.html" method="post">
-            <label for="">Usuario</label> <br>
-            <input type="email" placeholder="Ingresar email" name="usuario" value="">
-          </form>
-        </div>
+              <label for="">Usuario</label> <br>
+              <input type="email" placeholder="Ingresar email" name="usuario" value="">
 
-        <div class="container-contraseña">
-          <form class="" action="index.html" method="post">
-            <label for="">Contraseña</label> <br>
-            <input type="password" placeholder="Ingresar contraseña" name="contraseña" value="">
-          </form>
-        </div>
+          </div>
 
-        <div class="container-boton">
-          <form class="" action="profile.php" method="post">
-            <input class="boton" type="submit" name="" value="Login">
-          </form>
-        </div>
+          <div class="container-contraseña">
 
-        <div class="form-check">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="rememberUser">
-									Recordarme
-							  </label>
-				</div>
+              <label for="">Contraseña</label> <br>
+              <input type="password" placeholder="Ingresar contraseña" name="contrasenia" value="">
+
+          </div>
+
+
+          <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="rememberUser">
+                    Recordarme
+                  </label>
+          </div>
+          <div class="container-boton">
+
+              <input class="boton" type="submit" name="" value="Login">
+
+          </div>
+        </form>
+
 
         <div class="container-olvidaste">
           <a href="#">Olvidaste tu contraseña? Dame click</a>
