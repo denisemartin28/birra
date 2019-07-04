@@ -33,6 +33,15 @@
             "foto": "archivos\/img-5d1e752da23d9.jpg",
             "password": "$2y$10$WvJhQztQHaggOvbuGRF0deEmGQaRNfxGuscFJ6WJSLnyVoBAH54Zy",
             "pais": "AL"
+        },
+        {
+            "id": 5,
+            "nombre": "Alexis",
+            "apellido": "Barrientos",
+            "email": "alexis@hotmail.com",
+            "foto": "archivos\/img-5d1e7dbedcfdd.jpg",
+            "password": "$2y$10$02S2c\/EA5VGjVgVnv1bQw.g6IB3vbNimLNGJsvIQwDD8KGoTX5QQ2",
+            "pais": "AR"
         }
     ]
 }
