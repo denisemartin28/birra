@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-
+<?php
+$navbar=[
+ "Home"=>"home.php",
+ "Birras"=>"list-products.php",
+ "FAQ"=>"faq.php",
+ "Ingresá"=>"login.php",
+ "Registrate"=>"register.php",
+]
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -41,19 +49,11 @@
           <img src="img\Growla_logo_circulo_fondoblanco.png" alt="logo" class="navbar-brand">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <?php if ($_SESSION['usuario']): ?>
-                       <li class="lista"><a href="home.php"> Home </a></li>
-                       <li class="lista"><a href="list-products"> Birras </a></li>
-                       <li class="lista"><a href="faq.php"> FAQ </a></li>
-                     <?php endif; ?>
-                     <?php if (!$_SESSION["usuario"]): ?>
-                        <li class="lista"><a href="home.php"> Home </a></li>
-                        <li class="lista"><a href="list-products.php"> Birras </a></li>
-                         <li class="lista"><a href="faq.php"> FAQ </a></li>
-                        <li class="lista"><a href="login.php"> Ingresá </a></li>
-                                       <li><a href="register.php"> Registrate </a></li>
-                     <?php endif; ?>
-          </ul>
+                 <ul class="nav navbar-nav">
+                       <?php foreach ($navbar as $titulo => $link) : ?>
+                                     <li><a href="<?php echo $link; ?>"> <?php echo $titulo; ?> </a></li>
+                                 <?php endforeach; ?>
+                 </ul>
           <div class="pull-right">
                 <ul class="nav pull-right">
                     <li  class="dropdown"><a href="profile.php" class="dropdown-toggle" data-toggle="dropdown" id="perfil">Perfil<b class="caret"></b></a>
