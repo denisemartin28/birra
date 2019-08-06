@@ -11,22 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::get('/faq', function () {
+    return view('faq');
 });
 
-Route::get('/list-products', function () {
-    return view('list-products');
+Route::get('/listadoCervezas', function () {
+   return view('listadoCervezas');
 });
 
-Auth::routes();
+//Route::get('/faq', function () {
+//    return view('');
+//});
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/login', function () {
+//    return view('');
+//});
+
+//Route::get('/productos', "ProductosCotroller@listado"  {
+//return view("");
+//});
+
+//Route::get('/producto/{id}' "ProductosCotroller@detalle" {
+//return view("");
+//});
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
