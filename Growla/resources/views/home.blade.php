@@ -1,23 +1,14 @@
-@extends('layouts.app')
+{{-- usa la plantilla de template.blade.php --}}
+@extends('template')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+{{--se completa la parte del @yield en el template pasandole el nombre de la pagina, en este caso, home.--}}
+@section('pageTitle','Home')
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+@section('contenidoPrincipal')
+  <div class="home">
+        <img class="growla" src="\images\logonegropaint.png" alt="logo completo">
+          <h1>Somos Growla, una empresa que crece sobre dos pilares fundamentales: el amor por la birra y la amistad. </h1>
+      </div>
 @endsection
