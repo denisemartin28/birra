@@ -1,0 +1,270 @@
+/*edicion del header*/
+.containerheader{
+    max-width: 100%;
+    margin:auto;
+    padding:0px;
+    background-color: black;
+  }
+.jumbotron {
+ padding-top: 0px;
+ padding-bottom: 0px;
+ background-color: black;
+}
+
+.carousel-inner img {
+  background-size: cover;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 100;
+}
+/*edicion del home*/
+body {
+    background-color: black;
+}
+.lista {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+.collapse navbar-collapse {
+
+}
+.home {
+  margin: auto;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+h1 {
+    font-family: sans-serif;
+    color: white;
+
+    font-size: 20px;
+    text-align: center;
+
+    max-width: 95% ;
+  }
+  /*edicion del logo del home*/
+  .growla {
+    max-width: 100%;
+  }
+/*edicion del footer*/
+footer  ul {
+    list-style: none;
+    color: #9d9d9d;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #222;
+    width: 230px;
+    height: 70px;
+    border: 1px ;
+    border-color: black;
+    border-radius: 4px;
+    padding-left: 15px;
+
+  }
+
+  .iconos {
+      display:flex;
+      justify-content: space-around;
+      list-style: none;
+      color: #9d9d9d;
+      width: max-content;
+    }
+
+  .iconos li {
+    margin-right: 15px;
+  }
+
+@media (min-width:320px) {
+  .containerheader{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .home {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .growla {
+    max-width: 80%;
+  }
+
+}
+
+/*Estos dos medias son para la navbar la opción de Perfil,
+para que cuando se achique la pág todo se vea del lado izquierdo*/
+@media only screen and (max-width:320px) {
+  div.pull-right {
+  float: left !important;
+}
+
+  ul.dropdown-menu {
+    position: relative;
+
+  }
+}
+
+@media only screen and (max-width:767px) {
+  div.pull-right {
+  float: left !important;
+}
+  ul.dropdown-menu {
+    position: relative;
+
+  }
+}
+
+
+/*estilos segun viewport del header, home y footer*/
+@media (min-width:768px) {
+  .containerheader{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  footer  ul {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px auto;
+      width: 70%;
+      height: 40px;
+    }
+    .home {
+      max-width: 100%
+    }
+    h1 {
+    font-size: 35px;
+    max-width: 70%;
+    }
+    .growla {
+      max-width: 80%;
+    }
+}
+
+@media (min-width:1200px) {
+  .containerheader{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .home {
+    max-width: 100%
+  }
+  h1 {
+  font-size: 40px;
+  max-width: 70%;
+  }
+  .growla {
+    max-width: 80%;
+  }
+
+}
+
+  .id {
+    max-width:720px;
+  }
+  /*edicion de la pagina de FAQ*/
+
+.FAQ {
+  display: flex;
+  max-width: 100%;
+  flex-direction:column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+.h1FAQ {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.ul-faq {
+  padding: 0px;
+  margin: 0px;
+  max-width: 90%;
+}
+.preguntasFAQ {
+  color: rgb(124, 118, 116);
+  font-size: 20px;
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.respuestasFAQ {
+  color: rgb(194, 190, 190);
+  font-size: 19px;
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+/*edicion segun viewport de la pagina de FAQ*/
+@media (min-width:768px) {
+  .respuestasFAQ {
+    max-width:70%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  li.dropdown-toggle {
+    align-content: left;
+  }
+
+  ul.dropdown-menu {
+    position: relative;
+    max-width: 40%;
+  }
+
+  div.pull-right {
+    right: -100%;
+  }
+}
+@media (min-width:1200px) {
+  .respuestasFAQ {
+    max-width:60%;
+  }
+}
+
+.pull-right {
+  display: flex;
+}
+
+/* Css de la pag profile.php */
+div.pull-right {
+  background-color: #222 !important;
+}
+
+a#perfil.dropdown-toggle {
+  color: #9d9d9d !important;
+}
+
+ul.dropdown-menu {
+  background-color: #838383 !important;
+  position: absolute;
+  max-width: 50%;
+  text-align: left;
+  font-size: 14px;
+  justify-content: space-around;
+
+}
+
+.dropdown-menu>li>a {
+  font-weight: bold;
+  text-align: left;
+  justify-content: space-around;
+}

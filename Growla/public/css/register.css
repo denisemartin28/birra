@@ -1,0 +1,134 @@
+*{
+  font-family: helvetica;
+}
+body{
+  /*background-image: url(img/cerveza-artesanal.jpg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+color: #fff;
+}
+.container-imagen img{
+  height: 100px;
+  width: 200px;
+}
+/*h1{
+font-size: 20px;
+}*/
+.container{
+margin-top: 70px;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+/*border: 2px solid #fff;*/
+color: #fff;
+font-size: 16px;
+}
+
+.container-login{
+/*  width: 320px;*/
+
+  padding: 10px;
+  background-color: rgb(34, 34, 34);
+
+  /*border: 5px solid #fff;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  color: #f5f5f5;
+
+}
+.ingresar-datos{
+   /*border: 1px white solid;*/
+  margin: 25px;
+   height: 50px;
+  /* text-align: center;*/
+  display: flex;
+  flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+ /*background-color: #EF3E3E;*/
+ border-radius: 10px;
+    text-align: -webkit-center;
+}
+.ingresar-datos label{
+  text-align: center;*/
+}
+.container-boton{
+  text-align: center;
+  /*border: 1px solid green;*/
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.container-olvidaste{
+  text-align: center;
+  /*border: 1px solid green;*/
+  margin-bottom: 25px;
+
+}
+
+
+input.boton{
+ background-color: #a94442;
+  padding: 10px 30px;
+  color: #FFF;
+  font-size: 1em;
+  border-radius: 5px;
+font-weight: bold;
+}
+input.boton:hover{
+  background-color: #fff;
+  color: black;
+}
+.casillero{
+
+ border: none;
+ border-bottom: 3px solid black;
+ background-color: transparent;
+ outline: none;
+ height: 40px;
+ width: 100%;
+ color: #f5f5f5;
+font-size: 16px;
+text-align: center;
+}
+.ingresar-datos input:hover{
+  background-color: transparent;
+}
+
+.container-imagen{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.casillero:focus{
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-login {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      width: 550px;
+      height: 700px;
+    }
+
+.container-imagen img{
+  height: 150px;
+  width: 400px;
+}
+.pais {
+  background-color: #333;
+}
+.rojo {
+  color: red;
+}
