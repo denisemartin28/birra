@@ -98,9 +98,11 @@
 
                             <div class="col-md-6">
                               <select id="country" class="form-control @error('pais') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
-                                <?php foreach ($countries as $country): ?>
-                                  <option value=""></option>
-                                <?php endforeach; ?>
+                                  <option value="">Argentina</option>
+                                  <option value="">Brasil</option>
+                                  <option value="">Colombia</option>
+                                  <option value="">Uruguay</option>
+
 
                               </select>
                                 @error('country')
