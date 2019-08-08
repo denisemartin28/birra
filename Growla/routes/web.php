@@ -27,9 +27,9 @@ Route::get('/listadoCervezas', function () {
 //    return view('');
 //});
 
-//Route::get('/login', function () {
-//    return view('');
-//});
+Route::get('/login', function () {
+   return view('');
+});
 
 //Route::get('/productos', "ProductosCotroller@listado"  {
 //return view("");
@@ -39,6 +39,6 @@ Route::get('/listadoCervezas', function () {
 //return view("");
 //});
 
-//Auth::routes();
+Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
