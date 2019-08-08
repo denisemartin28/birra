@@ -1,6 +1,6 @@
 <?php
 $navbar=[
- "Home"=>"home",
+ "Home"=>"/",
  "Birras"=>"listadoCervezas",
  "FAQ"=>"faq",
  "Ingresá"=>"login",

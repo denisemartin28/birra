@@ -50,8 +50,11 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'surname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'country' => ['required'],
+            'file' => ['required']
         ]);
     }
 
@@ -65,8 +68,20 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'surname' => $data['surname'],
             'email' => $data['email'],
+            'country' => $data['country'],
+            'file' => $data['file'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $mensage = [
+          'required' => 'El campo : es obligatorio',
+          'string' => 'El campo : debe ser un texto',
+          'max' => 'El campo excede cantidad de caracteres',
+          'email' => 'El campo debe ser de formato Email',
+          'unique' => 'El campo debe ser unico',
+          'file' => 'El archivo debe ser de tipo jgp/',
+        ];
     }
 }

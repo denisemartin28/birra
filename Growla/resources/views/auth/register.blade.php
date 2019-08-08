@@ -97,7 +97,12 @@
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Pais') }}</label>
 
                             <div class="col-md-6">
+                              <select id="country" class="form-control @error('pais') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
+                                <?php foreach ($countries as $country): ?>
+                                  <option value=""></option>
+                                <?php endforeach; ?>
 
+                              </select>
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

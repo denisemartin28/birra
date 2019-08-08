@@ -27,9 +27,9 @@ Route::get('/listadoCervezas', function () {
 //    return view('');
 //});
 
-Route::get('/login', function () {
-   return view('');
-});
+Route::get('/Registro', 'RegisterController@Create');
+
+Route::get('/login', 'LoginController@');
 
 //Route::get('/productos', "ProductosCotroller@listado"  {
 //return view("");
