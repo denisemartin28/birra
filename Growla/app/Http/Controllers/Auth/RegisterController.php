@@ -49,12 +49,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:50'],
+            'surname' => ['required', 'string', 'max:50'],
+            'email' => ['required', 'string', 'email', 'max:50', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country' => ['required'],
-            'file' => ['required']
+            'file' => ['required', 'image']
         ]);
     }
 
@@ -75,13 +75,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $mensage = [
-          'required' => 'El campo : es obligatorio',
-          'string' => 'El campo : debe ser un texto',
-          'max' => 'El campo excede cantidad de caracteres',
-          'email' => 'El campo debe ser de formato Email',
-          'unique' => 'El campo debe ser unico',
-          'file' => 'El archivo debe ser de tipo jgp/',
+        $message = [
+          'required' => 'El campo :attribute es obligatorio',
+          'string' => 'El campo :attribute debe ser un texto',
+          'max' => 'El campo :attribute debe tener como maximo :max carácteres',
+          'min' => 'El campo :attribute debe tener como minimo :min carácteres',
+          'email' => 'El campo :attribute debe ser de formato Email',
+          'unique' => ':attribute ya se encuentra registrado',
+          'file' => 'El archivo :attribute debe ser de tipo jgp/jpeg/png',
         ];
     }
 }

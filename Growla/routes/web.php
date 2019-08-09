@@ -26,10 +26,10 @@ Route::get('/listadoCervezas', function () {
 //Route::get('/faq', function () {
 //    return view('');
 //});
+Route::get('/Registro', 'RegisterController@Validator');
+Route::post('/Registro', 'RegisterController@Create');
 
-Route::get('/Registro', 'RegisterController@Create');
-
-Route::get('/login', 'LoginController@');
+Route::get('/login', 'LoginController@Validar');
 
 //Route::get('/productos', "ProductosCotroller@listado"  {
 //return view("");
