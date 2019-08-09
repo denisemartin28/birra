@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="\css\stylesheet.css">
   <link rel="stylesheet" href="\css\list-products.css">
+  <link rel="articles" href="/css/articles.css">
 </head>
   <body>
 @include('partials.header')

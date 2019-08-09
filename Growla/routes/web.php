@@ -27,13 +27,14 @@ Route::get('/listadoCervezas', function () {
 //    return view('');
 //});
 
-Route::get('/Registro', 'RegisterController@Create');
+// Route::get('/Registro', 'RegisterController@Create');
+//
+// Route::get('/login', 'LoginController@');
 
-Route::get('/login', 'LoginController@');
-
-//Route::get('/productos', "ProductosCotroller@listado"  {
-//return view("");
-//});
+Route::get('/detalle/{id}', 'CervezasController@detalle');
+// Route::get('/productos', "ProductosCotroller@listado"  {
+// return view("");
+// });
 
 //Route::get('/producto/{id}' "ProductosCotroller@detalle" {
 //return view("");
