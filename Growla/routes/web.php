@@ -29,11 +29,12 @@ Route::get('/listadoCervezas', function () {
 Route::get('/Registro', 'RegisterController@Validator');
 Route::post('/Registro', 'RegisterController@Create');
 
-Route::get('/login', 'LoginController@Validar');
 
-//Route::get('/productos', "ProductosCotroller@listado"  {
-//return view("");
-//});
+
+// Route::get('/detalle/{id}', 'CervezasController@detalle');
+// Route::get('/productos', "ProductosCotroller@listado"  {
+// return view("");
+// });
 
 //Route::get('/producto/{id}' "ProductosCotroller@detalle" {
 //return view("");

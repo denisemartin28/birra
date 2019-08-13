@@ -48,14 +48,23 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+      $message = [
+        'required' => 'El campo :attribute es obligatorio',
+        'string' => 'El campo :attribute debe ser un texto',
+        'max' => 'El campo :attribute debe tener como maximo :max carácteres',
+        'min' => 'El campo :attribute debe tener como minimo :min carácteres',
+        'email' => 'El campo :attribute debe ser de formato Email',
+        'unique' => ':attribute ya se encuentra registrado',
+        'file' => 'El archivo :attribute debe ser de tipo jgp/jpeg/png',
+      ];
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:50'],
             'surname' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:50', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country' => ['required'],
-            'file' => ['required', 'image']
-        ]);
+            'foto' => ['required', 'image']
+        ], $message);
     }
 
     /**
@@ -66,23 +75,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      $request = request();
+      $imagen = $request->file('foto');
+
+		if ($imagen) {
+			// Creo un nombre único para archivo imagen
+			$imagenFinal = uniqid("img_") . "." . $imagen->extension();
+			// Subo el archivo en la carpeta elegida
+			$imagen->storePubliclyAs("/public/fotos", $imagenFinal);
+		};
+
+    //dd($imagenFinal);
+
         return User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
             'email' => $data['email'],
             'country' => $data['country'],
-            'file' => $data['file'],
+            'foto' => $imagenFinal,
             'password' => Hash::make($data['password']),
         ]);
 
-        $message = [
-          'required' => 'El campo :attribute es obligatorio',
-          'string' => 'El campo :attribute debe ser un texto',
-          'max' => 'El campo :attribute debe tener como maximo :max carácteres',
-          'min' => 'El campo :attribute debe tener como minimo :min carácteres',
-          'email' => 'El campo :attribute debe ser de formato Email',
-          'unique' => ':attribute ya se encuentra registrado',
-          'file' => 'El archivo :attribute debe ser de tipo jgp/jpeg/png',
-        ];
+
     }
 }

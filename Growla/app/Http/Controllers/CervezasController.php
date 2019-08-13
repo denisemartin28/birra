@@ -13,7 +13,7 @@ class CervezasController extends Controller
     }
 public function detalle($id){
   $cerveza = Cerveza::find($id);
-  $vac = compact["cerveza"];
-  return view("detalleCerveza", $id);
+  $vac = compact("cerveza");
+  return view("productsdetails", $vac);
 }
 }
