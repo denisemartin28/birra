@@ -19,9 +19,7 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/listadoCervezas', function () {
-   return view('listadoCervezas');
-});
+Route::get('/listadoCervezas', 'CervezasController@listado');
 
 //Route::get('/faq', function () {
 //    return view('');
@@ -31,7 +29,7 @@ Route::post('/Registro', 'RegisterController@Create');
 
 
 
-// Route::get('/detalle/{id}', 'CervezasController@detalle');
+Route::get('/detalle/{id}', 'CervezasController@detalle');
 // Route::get('/productos', "ProductosCotroller@listado"  {
 // return view("");
 // });

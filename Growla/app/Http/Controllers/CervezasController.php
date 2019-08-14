@@ -7,9 +7,9 @@ use App\Cerveza;
 class CervezasController extends Controller
 {
     public function listado(){
-      $cervezas = Cerveza::All();
-      $vac = compact["cervezas"];
-      return view ("listadoProductos", $vac);
+      $cervezas = Cerveza::all();
+      $vac = compact("cervezas");
+      return view ("listadoCervezas", $vac);
     }
 public function detalle($id){
   $cerveza = Cerveza::find($id);

@@ -21,7 +21,7 @@ $navbar=[
                  <ul class="nav navbar-nav">
 
                        @foreach ($navbar as $titulo => $link)
-                                     <li><a href="{{$link}} "> {{$titulo}} </a></li>
+                                     <li><a href="/{{$link}} "> {{$titulo}} </a></li>
                                  @endforeach
 
                  </ul>
