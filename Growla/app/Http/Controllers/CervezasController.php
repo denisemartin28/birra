@@ -11,9 +11,14 @@ class CervezasController extends Controller
       $vac = compact("cervezas");
       return view ("listadoCervezas", $vac);
     }
-public function detalle($id){
-  $cerveza = Cerveza::find($id);
-  $vac = compact("cerveza");
-  return view("productsdetails", $vac);
-}
+
+    public function detalle($id){
+      $cerveza = Cerveza::find($id);
+      $vac = compact("cerveza");
+      return view("productsdetails", $vac);
+    }
+
+    public function nuevaCerveza(){
+      return view ("nueva-cerveza");
+    }
 }
