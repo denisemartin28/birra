@@ -1,7 +1,8 @@
 <?php
 $navbar=[
  "Home"=>"/",
- "Birras"=>"listadoCervezas",
+ "Birras"=>"beers-list",
+ "Agregar cerveza"=>"new-beer",
  "FAQ"=>"faq",
  "Ingresá"=>"login",
  "Registrate"=>"register",

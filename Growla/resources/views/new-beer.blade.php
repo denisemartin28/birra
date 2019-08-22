@@ -5,7 +5,7 @@
 {{--se completa la parte del @yield en el template pasandole el nombre de la pagina, en este caso, home.--}}
 @section('pageTitle','Nuestras birras')
 @section('contenidoPrincipal')
-<form class="" action="index.html" method="post">
+<form class="" action="/new-beer" method="post">
   <label for="">Tipo de cerveza</label>
   <br>
  <input type="text" name="type" value="">
@@ -27,15 +27,12 @@
 <select class="" name="color_id">
   <br>
   <option value="">Elegí un color</option>
-  <?php foreach ($colors as $color): ?>
-    <option value="<?php echo $color->getId() ?>"><?php echo $color->getColor() ?></option>
-  <?php endforeach; ?>
   </select>
   <label for="">Insertá una imagen</label>
   <br>
   <input type="file" name="image" value="">
   <br>
-<input type="submit" name="" value="">
+<input type="submit" name="" value="Enviar">
 
 </form>
 @endsection
