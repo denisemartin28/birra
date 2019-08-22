@@ -19,7 +19,7 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/listadoCervezas', 'CervezasController@listado');
+Route::get('/beers-list', 'BeerController@listado')->name('beers.list');
 
 //Route::get('/faq', function () {
 //    return view('');
@@ -29,8 +29,8 @@ Route::post('/Registro', 'RegisterController@Create');
 
 
 
-Route::get('/detalle/{id}', 'CervezasController@detalle');
-Route::get('/nueva-cerveza', 'CervezasController@nuevaCerveza');
+Route::get('/detalle/{id}', 'BeerController@detalle')->name('details');
+Route::get('/new-beer', 'BeerController@nuevaCerveza');
 // Route::get('/productos', "ProductosCotroller@listado"  {
 // return view("");
 // });
@@ -38,6 +38,10 @@ Route::get('/nueva-cerveza', 'CervezasController@nuevaCerveza');
 //Route::get('/producto/{id}' "ProductosCotroller@detalle" {
 //return view("");
 //});
+
+Route::get('/search', 'SearchController@search')->name('search');
+
+
 
 Auth::routes();
 

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cerveza extends Model
-{ 
+class Color extends Model
+{
+    //
 }
