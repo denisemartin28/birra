@@ -6,7 +6,7 @@
 @section('pageTitle','Nuestras birras')
 @section('contenidoPrincipal')
 <ul class="alert danger">
-  @<?php foreach ($errors ->all() as $Error): ?>
+  <?php foreach ($errors ->all() as $error): ?>
     <li>
       {{$error}}
     </li>

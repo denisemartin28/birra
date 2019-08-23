@@ -26,6 +26,14 @@
               </ul>
             </p>
         </div>
+        <div >
+                 <form class="" action="/deleteBeer" method="post">
+                  {{csrf_field()}}
+                  <input type="hidden" name="id" value="{{$beer->id}}">
+                  <input type="submit" name="" value="Borrar birra">
+                </form>
+                <a href="{{url('/beer-edit/'.$beer->id)}}">Editar</a>
+        </div>
       </article>
               </ul>
             </p>
