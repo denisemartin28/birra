@@ -19,6 +19,9 @@ class BeerController extends Controller
       return view("productsdetails", $vac);
     }
 
+
+//CREAR BIRRA
+
     public function createBeer(){
       $colors=Color::all();
       $vac = compact("colors");
@@ -30,15 +33,20 @@ class BeerController extends Controller
         // no hace falta aclarar el nombre de la col porque se llama igual
         "description"=>"required|string|min:20|unique:beers",
         "IBUs"=>"required|string|min:0",
-        "alcohol_content"=>"required|string|min:0",
-        "color_id"=>"required|string"
+        "alcohol_content"=>"required|string|min:0"
+      //  "color_id"=>"|string"
       ];
       $msj=[
-        "type.required" => "";
-        "type.min" => "";
+        "required" => "El campo :attribute se encuentra repetido",
+        "string" => "El campo :attribute debe ser un texto",
+        "min" => "El campo :attribute tiene un minimo  de :min",
+        "required" => "El campo :attribute debe ser obligatorio",
+        "numeric" => "El campo :attribute debe ser un numero"
       ];
 
       $this->validate($req,$rules,$msj);
+
+//INGRESA LOS VALORES REDACTADOS EN EL FORMULARIO
 
       $newBeer = new Beer();
       $newBeer->type= $req["type"];
@@ -51,4 +59,33 @@ class BeerController extends Controller
 
       return view ("beers-list");
     }
+
+//BORRAR BIRRA
+
+public function delete(Request $req){
+  $id = $req["id"];
+  $beer = Beer::find($id);
+  $beer->delete();
+  return redirect('beers-list');
+}
+
+//EDITA LOS DATOS DE LA BASE
+
+public function edit($id){
+  //()$colors = Color::find($id);
+  $beer = Beer::find($id);
+  $vac = compact("beer");
+  //$vac2 = compact("colors");
+  return view ("beer-edit",$vac);
+}
+
+//ACTUALIZA LOS DATOS DE LA BASE
+
+public function update(Request $req,$id){
+$beerData = request()->except(['_token','_method' ]);
+Beer::where('id', '==', $id)->update($beerData);
+$beer = Beer::find($id);
+$vac = compact('beer');
+return view ('beer-edit',$vac);
+}
 }
