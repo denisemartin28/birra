@@ -14,12 +14,18 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/home', function () {
+    return view('home');
+});
 
 Route::get('/faq', function () {
     return view('faq');
 });
 
 Route::get('/beers-list', 'BeerController@listado')->name('beers.list');
+Route::post('/deleteBeer', 'BeerController@delete');
+Route::get('/beer-edit/{id}', 'BeerController@edit');
+Route::patch('/beers-list/{id}', 'BeerController@update');
 
 //Route::get('/faq', function () {
 //    return view('');
