@@ -5,14 +5,22 @@
 {{--se completa la parte del @yield en el template pasandole el nombre de la pagina, en este caso, home.--}}
 @section('pageTitle','Nuestras birras')
 @section('contenidoPrincipal')
-<form class="" action="/new-beer" method="post">
+<ul class="alert danger">
+  @<?php foreach ($errors ->all() as $Error): ?>
+    <li>
+      {{$error}}
+    </li>
+  <?php endforeach; ?>
+</ul>
+<form class="" action="/new-beer" method="post" enctype="multipart/form-data">
+  {{csrf_field()}}
   <label for="">Tipo de cerveza</label>
   <br>
  <input type="text" name="type" value="">
  <br>
  <label for="">Descripcion</label>
  <br>
- <input type="text" name="description" value="">
+ <textarea name="description" rows="8" cols="21"></textarea>
  <br>
  <label for="">IBU</label>
  <br>
@@ -27,7 +35,11 @@
 <select class="" name="color_id">
   <br>
   <option value="">Elegí un color</option>
+  @<?php foreach ($colors as $color): ?>
+  <option value="">{{$color->color}}</option>
+  <?php endforeach; ?>
   </select>
+  <br>
   <label for="">Insertá una imagen</label>
   <br>
   <input type="file" name="image" value="">

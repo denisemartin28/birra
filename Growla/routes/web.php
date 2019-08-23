@@ -30,7 +30,8 @@ Route::post('/Registro', 'RegisterController@Create');
 
 
 Route::get('/detalle/{id}', 'BeerController@detalle')->name('details');
-Route::get('/new-beer', 'BeerController@newbeer');
+Route::get('/new-beer', 'BeerController@createBeer');
+Route::post('/new-beer', 'BeerController@newbeer');
 // Route::get('/productos', "ProductosCotroller@listado"  {
 // return view("");
 // });

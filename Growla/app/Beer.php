@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Beer extends Model
 {
+
   // use SearchableTrait, Searchable;
   //
   // protected $fillable = ['quantity'];
