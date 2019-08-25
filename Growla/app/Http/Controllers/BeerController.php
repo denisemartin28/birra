@@ -34,7 +34,7 @@ class BeerController extends Controller
         "description"=>"required|string|min:20|unique:beers",
         "IBUs"=>"required|string|min:0",
         "alcohol_content"=>"required|string|min:0"
-      //  "color_id"=>"|string"
+        //"color_id"=>"numeric"
       ];
       $msj=[
         "required" => "El campo :attribute se encuentra repetido",
@@ -56,8 +56,10 @@ class BeerController extends Controller
       $newBeer->color_id= $req["color_id"];
       $newBeer->image= $req["image"];
       $newBeer->save();
+      $beers = Beer::all();
+      $vac = compact("beers");
 
-      return view ("beers-list");
+      return view ("beers-list",$vac);
     }
 
 //BORRAR BIRRA
@@ -72,20 +74,49 @@ public function delete(Request $req){
 //EDITA LOS DATOS DE LA BASE
 
 public function edit($id){
-  //()$colors = Color::find($id);
   $beer = Beer::find($id);
   $vac = compact("beer");
-  //$vac2 = compact("colors");
   return view ("beer-edit",$vac);
 }
 
 //ACTUALIZA LOS DATOS DE LA BASE
 
 public function update(Request $req,$id){
+
+//$data = request()->validate([
+//"type"  => "required",
+//"description" => "required",
+//"IBUs" => "required",
+//"alcohol_content" => "required"
+//]);
+// $beer->beers-list->update($data);
+//return redirect('beers-list');
+// }
+
+$rules=[
+  "type"=>"required|string|min:3|",
+  // no hace falta aclarar el nombre de la col porque se llama igual
+  "description"=>"required|string|min:20|",
+  "IBUs"=>"required|string|min:0",
+  "alcohol_content"=>"required|string|min:0"
+//  "color_id"=>"|string"
+];
+$msj=[
+
+  "string" => "El campo :attribute debe ser un texto",
+  "min" => "El campo :attribute tiene un minimo  de :min",
+  "required" => "El campo :attribute debe ser obligatorio",
+  "numeric" => "El campo :attribute debe ser un numero"
+];
+
+$this->validate($req,$rules,$msj);
+
+
+
 $beerData = request()->except(['_token','_method' ]);
 Beer::where('id', '==', $id)->update($beerData);
 $beer = Beer::find($id);
 $vac = compact('beer');
-return view ('beer-edit',$vac);
+return redirect ('beers-list/{$vac}');
 }
 }
