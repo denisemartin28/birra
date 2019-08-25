@@ -1,0 +1,5 @@
+{
+    "require": {
+        "sofa/eloquence": "^5.6"
+    }
+}

@@ -1,7 +1,8 @@
 <?php
 $navbar=[
- "Home"=>"/",
- "Birras"=>"listadoCervezas",
+ "Home"=>"home",
+ "Birras"=>"beers-list",
+ "Agregar cerveza"=>"new-beer",
  "FAQ"=>"faq",
  "Ingresá"=>"login",
  "Registrate"=>"register",
@@ -25,8 +26,14 @@ $navbar=[
                                  @endforeach
 
                  </ul>
-          <div class="pull-right">
+
+
+        <div class="pull-right">
                 <ul class="nav pull-right">
+                  <form action="{{ route('search') }}" method="GET" class="search-form">
+                    <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Buscar">
+                  </form>
+
                     <li  class="dropdown"><a href="profile.php" class="dropdown-toggle" data-toggle="dropdown" id="perfil">Perfil<b class="caret"></b></a>
                         <ul style="left: -100%;" class="dropdown-menu">
                             <li><a href="profile.php"><i class="icon-cog" ></i>Ver mi perfil</a></li>

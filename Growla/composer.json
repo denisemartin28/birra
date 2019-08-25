@@ -9,10 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+<<<<<<< HEAD
         "doctrine/dbal": "^2.9",
+=======
+        "algolia/algoliasearch-client-php": "^2.3",
+>>>>>>> 26e7f16cbcd014466fc883e510531b2df7f91a89
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/scout": "^7.1",
+        "laravel/tinker": "^1.0",
+        "nicolaslopezj/searchable": "^1.11",
+        "sofa/eloquence": "^5.6"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
