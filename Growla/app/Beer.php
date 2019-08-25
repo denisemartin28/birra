@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Beer extends Model
 {
-
+public $table = "beers";
+public $guarded = [];
   // use SearchableTrait, Searchable;
   //
-  // protected $fillable = ['quantity'];
+  //protected $fillable = ['quantity'];
   //
   //   /**
   //    * Searchable rules.
