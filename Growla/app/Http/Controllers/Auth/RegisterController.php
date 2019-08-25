@@ -11,27 +11,21 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 class RegisterController extends Controller
 {
     /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
+    | Este controlador maneja el registro de nuevos usuarios, así como sus
+    | validación y creación. Por defecto, sin requerir ningún código adicional.
     */
 
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Dónde redirigir a los usuarios después del registro.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'profile';
 
     /**
-     * Create a new controller instance.
+     * Crea una nueva instancia de controlador.
      *
      * @return void
      */
@@ -41,7 +35,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Validador para una solicitud de registro.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
@@ -49,13 +43,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
       $message = [
-        'required' => 'El campo :attribute es obligatorio',
-        'string' => 'El campo :attribute debe ser un texto',
-        'max' => 'El campo :attribute debe tener como maximo :max carácteres',
-        'min' => 'El campo :attribute debe tener como minimo :min carácteres',
-        'email' => 'El campo :attribute debe ser de formato Email',
-        'unique' => ':attribute ya se encuentra registrado',
-        'file' => 'El archivo :attribute debe ser de tipo jgp/jpeg/png',
+        'required' => 'El campo es obligatorio',
+        'string' => 'El campo debe ser un texto',
+        'max' => 'El campo debe tener como maximo :max carácteres',
+        'min' => 'El campo debe tener como minimo :min carácteres',
+        'email' => 'El campo debe ser de formato Email',
+        'unique' => 'La información ya se encuentra registrada',
+        'file' => 'El archivo debe ser de tipo jgp/jpeg/png',
       ];
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:50'],
@@ -63,19 +57,21 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:50', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country' => ['required'],
-            'foto' => ['required', 'image']
+            'avatar' => ['required', 'image']
         ], $message);
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Crea una nueva instancia de usuario después de un registro válido.
      *
      * @param  array  $data
      * @return \App\User
      */
     protected function create(array $data)
     {
+      //
       $request = request();
+      // Del request en foto se guarda en la variable
       $imagen = $request->file('foto');
 
 		if ($imagen) {
@@ -85,14 +81,13 @@ class RegisterController extends Controller
 			$imagen->storePubliclyAs("/public/fotos", $imagenFinal);
 		};
 
-    //dd($imagenFinal);
 
         return User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
             'email' => $data['email'],
             'country' => $data['country'],
-            'foto' => $imagenFinal,
+            'avatar' => $imagenFinal,
             'password' => Hash::make($data['password']),
         ]);
 

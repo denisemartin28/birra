@@ -29,6 +29,7 @@ Route::post('/Registro', 'RegisterController@Create');
 
 
 
+
 Route::get('/detalle/{id}', 'CervezasController@detalle');
 Route::get('/nueva-cerveza', 'CervezasController@nuevaCerveza');
 // Route::get('/productos', "ProductosCotroller@listado"  {
@@ -41,4 +42,4 @@ Route::get('/nueva-cerveza', 'CervezasController@nuevaCerveza');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
