@@ -32,7 +32,7 @@
                   <input type="hidden" name="id" value="{{$beer->id}}">
                   <input type="submit" name="" value="Borrar birra">
                 </form>
-                <a href="{{url('/beer-edit/'.$beer->id)}}">Editar</a>
+                <a href="/beer-edit/{{$beer->id}}">Editar</a>
         </div>
       </article>
               </ul>
