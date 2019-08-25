@@ -25,7 +25,7 @@ Route::get('/faq', function () {
 Route::get('/beers-list', 'BeerController@listado')->name('beers.list');
 Route::post('/deleteBeer', 'BeerController@delete');
 Route::get('/beer-edit/{id}', 'BeerController@edit');
-Route::patch('/beers-list/{id}', 'BeerController@update');
+Route::patch('/beer-edit/{id}', 'BeerController@update');
 
 //Route::get('/faq', function () {
 //    return view('');
